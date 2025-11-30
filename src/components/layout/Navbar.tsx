@@ -4,6 +4,7 @@ import SearchInput from "@/components/layout/SearchInput";
 import UserButton from "@/components/layout/UserButton";
 import ModeToggle from "@/components/mode-toggle";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -15,10 +16,14 @@ export default function Navbar() {
           </div>
           <SearchInput />
 
-          <div className="flex gap-5 lg:gap-8 items-center">
+          <div className="flex gap-5 lg:gap-7 items-center">
             <ModeToggle />
             <Notifications />
             <UserButton />
+            <>
+              <Link href='/login'>Login</Link>
+              <Link href='/register'>Register</Link>
+            </>
           </div>
         </div>
       </Container>
